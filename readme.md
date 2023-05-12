@@ -16,7 +16,7 @@
 │       ├── base
 │       ├── component
 │       ├── global
-│       ├── layout
+│       ├── layouts
 │       └── pages
 └── templates
 
@@ -35,6 +35,4 @@ npm install postcss-cli autoprefixer -D
   "last 2 versions",
   "> 1% in JP"
 ]
-# wp-base
-# wp-base
-# wp-base
+
