@@ -1,0 +1,71 @@
+@use "../global"as *;
+.menuBox {
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+.menuTop,
+.menuCenter,
+.menuBottom {
+  display: block;
+  width: 30px;
+  height: 2px;
+  border-radius: 20px;
+  background: #000;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.menuTop {
+  top: 42%;
+}
+
+.menuCenter {
+  top: 50%;
+}
+
+.menuBottom {
+  top: 58%;
+}
+
+
+.menuTop.active {
+  width: 34px;
+  top: 50%;
+  transform: translate(-50%, 0) rotate(30deg);
+}
+
+.menuBottom.active {
+  width: 34px;
+  top: 50%;
+  transform: translate(-50%, 0) rotate(-30deg);
+}
+
+
+/* クリック時 */
+.navActive {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.menuTopActive {
+  top: 30px !important;
+  transform: translate(-50%, 0) rotate(30deg) !important;
+  background: #fff!important;
+}
+
+.menuCenterActive {
+  opacity: 0;
+}
+
+.menuBottomActive {
+  top: 30px !important;
+  transform: translate(-50%, 0) rotate(-30deg) !important;
+  background: #fff!important;
+}
+.menuTextActive {
+  color: #fff!important;
+}
