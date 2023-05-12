@@ -1,42 +1,25 @@
 ##directory
-
+<pre>
 .
 ├── dist
-
 │   ├── css
-
 │   ├── fonts
-
 │   ├── js
-
 │   │   └── lib
-
 │   └── svg
-
 ├── images
-
 │   ├── common
-
 │   └── top
-
 ├── src
-
 │   ├── js
-
 │   └── sass
-
 │       ├── base
-
 │       ├── component
-
 │       ├── global
-
 │       ├── layouts
-
 │       └── pages
-
 └── templates
-
+</pre>
 ## npm package basis
 npm init
 
@@ -52,4 +35,5 @@ npm install postcss-cli autoprefixer -D
   "last 2 versions",
   "> 1% in JP"
 ]
+# wp-base
 
