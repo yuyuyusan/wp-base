@@ -2,22 +2,39 @@
 
 .
 ├── dist
+
 │   ├── css
+
 │   ├── fonts
+
 │   ├── js
+
 │   │   └── lib
+
 │   └── svg
+
 ├── images
+
 │   ├── common
+
 │   └── top
+
 ├── src
+
 │   ├── js
+
 │   └── sass
+
 │       ├── base
+
 │       ├── component
+
 │       ├── global
+
 │       ├── layouts
+
 │       └── pages
+
 └── templates
 
 ## npm package basis
