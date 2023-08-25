@@ -59,7 +59,7 @@ function my_script_init()
 	wp_enqueue_script('swiper_js-01', get_template_directory_uri() . '/assets/js/libs/swiper-bundle.min.js', array(), null, true);
 	wp_enqueue_script('swiper_js-02', get_template_directory_uri() . '/assets/js/swiper.js', array(), null, true);
 	wp_enqueue_script('ajax_js', 'https://ajaxzip3.github.io/ajaxzip3.js', array(), false);
-	wp_enqueue_script('js', get_template_directory_uri() . '/assets/js/index.js', array(), null, true);
+	wp_enqueue_script('js', get_template_directory_uri() . '/dist/bundle.js', array(), null, true);
 }
 add_action('wp_enqueue_scripts', 'my_script_init');
 // ------------------------------

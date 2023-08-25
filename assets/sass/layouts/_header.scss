@@ -1,4 +1,6 @@
 @use "../global"as *;
+
+// menu
 button.menuBox {
   width: 60px;
   height: 60px;
@@ -8,7 +10,11 @@ button.menuBox {
   background: transparent;
   border: none;
   z-index: 11111;
-	cursor: pointer;
+  cursor: pointer;
+  display: none;
+  @include mq(vp-pc-s) {
+    display: block;
+  }
 }
 .menuTop,
 .menuCenter,
@@ -17,59 +23,33 @@ button.menuBox {
   width: 30px;
   height: 2px;
   border-radius: 20px;
-  background: #000;
+  background: map-get($color, black01);
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
 }
-
 .menuTop {
   top: 42%;
 }
-
 .menuCenter {
   top: 50%;
 }
-
 .menuBottom {
   top: 58%;
 }
-
-
-.menuTop.active {
+.menuTop.js-active {
   width: 34px;
   top: 50%;
   transform: translate(-50%, 0) rotate(30deg);
 }
 
-.menuBottom.active {
+.menuBottom.js-active {
   width: 34px;
   top: 50%;
   transform: translate(-50%, 0) rotate(-30deg);
 }
-
-
-/* クリック時 */
-.navActive {
-  visibility: visible !important;
-  opacity: 1 !important;
-}
-
-.menuTopActive {
-  top: 30px !important;
-  transform: translate(-50%, 0) rotate(30deg) !important;
-  background: #fff!important;
-}
-
-.menuCenterActive {
-  opacity: 0;
-}
-
-.menuBottomActive {
-  top: 30px !important;
-  transform: translate(-50%, 0) rotate(-30deg) !important;
-  background: #fff!important;
-}
-.menuTextActive {
-  color: #fff!important;
+.menuCenter.js-active {
+  width: 34px;
+  top: 50%;
+  transform: translate(-50%, 0) rotate(-30deg);
 }
