@@ -1,6 +1,6 @@
 <!-- footer -->
 <footer id="footer" class="footer">
-  <p class="copy">&copy;2022 inc.</p>
+  <p class="copy">&copy;2023 inc.</p>
 </footer>
 <!-- wrapper -->
 </div>

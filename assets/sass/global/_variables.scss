@@ -1,0 +1,35 @@
+// ------------------------------
+// 変数
+// ------------------------------
+
+// content width
+$pc-m: 1400px;
+$pc-s: 1170px;
+$tab: 960px;
+$sp: 560px;
+
+
+$vp-pc-m: 1200px;
+$vp-pc-s: 960px;
+$vp-tab: 768px;
+$vp-sp: 560px;
+
+$breakpoint: (
+  pc-m: 1400px,
+  pc-s: 1170px,
+  tab: 960px,
+  sp: 560px,
+);
+// color
+$colors: (
+  black: #000,
+  red: #c10011,
+);
+$black01: #000;
+$red01: #c10011;
+
+// font-family
+$f-sans: 'Noto Sans JP', sans-serif;
+$f-serif: 'Noto Serif JP', serif;
+$f-roboto: 'Roboto', sans-serif;
+$f-robotoCondensed: 'RobotoCondensed', sans-serif;
