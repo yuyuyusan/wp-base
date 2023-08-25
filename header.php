@@ -15,7 +15,6 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<link rel="canonical" href="<?php echo esc_url(home_url()); ?>/">
 	<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/assets/images/common/apple-touch-icon.png">
-
 	<!-- twitter ogp -->
 	<meta name="twitter:card" content="summary">
 	<meta property="og:title" content="<?php the_title(); ?>" />
