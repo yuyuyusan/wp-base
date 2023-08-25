@@ -3,35 +3,15 @@
 // ------------------------------
 @use "variables"as *;
 
+// ----------
+// media query
+// ----------
 @mixin mq($bp) {
   $bp-value: map-get($breakpoint, $bp);
   @media (max-width: $bp-value) {
     @content;
   }
 }
-
-
-@mixin pc-m {
-  @media screen and (max-width: ($pc-m)) {
-    @content;
-  }
-}
-@mixin pc-s {
-  @media screen and (max-width: ($pc-s)) {
-    @content;
-  }
-}
-@mixin tab {
-  @media screen and (max-width: ($tab)) {
-    @content;
-  }
-}
-@mixin sp {
-  @media screen and (max-width: ($sp)) {
-    @content;
-  }
-}
-
 
 // ----------
 // margin

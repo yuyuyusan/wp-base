@@ -13,7 +13,8 @@ html {
   line-height: 1.6;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
-  @include tab {
+  @include mq(vp-tab) {
+    font-size: 14px;
     line-height: 1.8;
   }
 }
@@ -22,9 +23,9 @@ body {
   margin: 0;
   -webkit-text-size-adjust: 100%;
   font-size: 16px;
-  color: $black01;
-  background: #faf5ed;
+  color: map-get($color, black01);
   overflow-x: hidden;
+  letter-spacing: 0.1em;
 }
 
 p,
@@ -149,7 +150,8 @@ textarea {
   text-align: inherit;
   text-transform: inherit;
 }
-input,textarea {
+input,
+textarea {
   width: 100%;
 }
 
@@ -228,13 +230,12 @@ details {
   display: block;
 }
 
-
 summary {
   display: list-item;
 }
 a:focus {
   outline: auto;
-  background: #ffe5e5;
+  background: #fafafa;
 }
 [contenteditable]:focus {
   outline: auto;
@@ -268,12 +269,12 @@ img {
 
 a {
   text-decoration: none;
-  color: $black01;
+  color: map-get($color, black01);
   margin: 0;
   padding: 0;
   vertical-align: baseline;
   background: transparent;
-  -webkit-tap-highlight-color: $black01;
+  -webkit-tap-highlight-color: map-get($color, black01);
 }
 
 a[href^='tel:'] {
@@ -281,7 +282,7 @@ a[href^='tel:'] {
   cursor: default;
   text-decoration: none;
 
-  @include sp {
+  @include mq(vp-sp) {
     pointer-events: auto;
   }
 }
