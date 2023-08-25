@@ -1,1 +1,1 @@
-# chubou-senka
+# WordPress Base
