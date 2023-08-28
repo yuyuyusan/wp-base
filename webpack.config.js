@@ -1,18 +1,21 @@
 module.exports = {
-  entry: './assets/js/index.ts',
-  output: {
-    path: `${__dirname}/dist`,
-    filename: 'bundle.js',
+  entry: {
+    main: './src/js/index.ts',
+    splide: './src/js/splide.ts',
   },
-  mode : 'development',
+  output: {
+    path: `${__dirname}/dist/js`,
+    filename: '[name].bundle.js', 
+  },
+  mode: 'development',
   resolve: {
     extensions: ['.ts', '.js'],
   },
   devServer: {
-    static : {
-      directory : `${__dirname}/dist`,
+    static: {
+      directory: `${__dirname}/dist`,
     },
-    open : true,
+    open: true,
   },
   module: {
     rules: [

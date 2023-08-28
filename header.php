@@ -14,7 +14,7 @@
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<link rel="canonical" href="<?php echo esc_url(home_url()); ?>/">
-	<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/assets/images/common/apple-touch-icon.png">
+	<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/src/images/common/apple-touch-icon.png">
 	<!-- twitter ogp -->
 	<meta name="twitter:card" content="summary">
 	<meta property="og:title" content="<?php the_title(); ?>" />
@@ -26,10 +26,10 @@
 			<meta property="og:image" content="<?php the_post_thumbnail_url(); ?>" />
 		<?php else :
 		?>
-			<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/assets/images/common/noimage.jpg" />
+			<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/src/images/common/noimage.jpg" />
 		<?php endif; ?>
 	<?php elseif (is_archive() || is_tax()) : ?>
-		<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/assets/images/common/noimage.jpg" />
+		<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/src/images/common/noimage.jpg" />
 	<?php endif; ?>
 	<!-- Facebook Open Graph -->
 	<meta property="og:title" content="<?php the_title(); ?>" />
@@ -39,7 +39,7 @@
 	<?php if (has_post_thumbnail()) : ?>
 		<meta property="og:image" content="<?php the_post_thumbnail_url(); ?>" />
 	<?php else : ?>
-		<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/assets/images/common/noimage.jpg" />
+		<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/src/images/common/noimage.jpg" />
 	<?php endif; ?>
 	<!-- LINE ogp -->
 	<meta property="og:image" content="<?php the_post_thumbnail_url(); ?>" />
@@ -54,7 +54,7 @@
 		<header id="header" class="header">
 			<div class="logo">
 				<a href="<?php echo esc_url(home_url()); ?>/">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/" alt="">
+					<img src="<?php echo get_template_directory_uri(); ?>/src/images/common/" alt="">
 				</a>
 			</div>
 

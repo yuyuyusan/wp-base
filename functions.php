@@ -55,11 +55,12 @@ add_theme_support('post-thumbnails');
 // ------------------------------
 function my_script_init()
 {
-	wp_enqueue_style('style', get_template_directory_uri() . '/assets/css/style.css', array(), null, false);
-	wp_enqueue_script('swiper_js-01', get_template_directory_uri() . '/assets/js/libs/swiper-bundle.min.js', array(), null, true);
-	wp_enqueue_script('swiper_js-02', get_template_directory_uri() . '/assets/js/swiper.js', array(), null, true);
+	wp_enqueue_style('style', get_template_directory_uri() . '/dist/css/style.css', array(), null, false);
+	wp_enqueue_style('splide_css', get_template_directory_uri() . '/src/libs/css/splide.min.css', array(), null, false);
 	wp_enqueue_script('ajax_js', 'https://ajaxzip3.github.io/ajaxzip3.js', array(), false);
-	wp_enqueue_script('js', get_template_directory_uri() . '/dist/bundle.js', array(), null, true);
+	wp_enqueue_script('fontawsome', 'https://kit.fontawesome.com/6619226b9a.js', array(), false);
+	wp_enqueue_script('splide-js', get_template_directory_uri() . '/dist/js/splide.bundle.js', array(), null, true);
+	wp_enqueue_script('js', get_template_directory_uri() . '/dist/js/main.bundle.js', array(), null, true);
 }
 add_action('wp_enqueue_scripts', 'my_script_init');
 // ------------------------------
@@ -152,10 +153,7 @@ function my_custom_post_type_permalinks_set($termlink, $term, $taxonomy)
 	return str_replace('/' . $taxonomy . '/', '/', $termlink);
 }
 add_filter('term_link', 'my_custom_post_type_permalinks_set', 11, 3);
-
-// ------------------------------
 // wp_nav_menuのliにclass追加
-// ------------------------------
 function add_additional_class_on_li($classes, $item, $args)
 {
   if (isset($args->add_li_class)) {
