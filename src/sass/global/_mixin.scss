@@ -19,7 +19,7 @@
 @mixin marginTandB($value: 40px) {
   margin: $value 0;
   @if ($value > 60px) {
-    @include tab {
+    @include mq (vp-tab){
       margin: calc($value / 2) 0;
     }
   }
@@ -30,7 +30,7 @@
 @mixin paddingTandB($value: 40px) {
   padding: $value 0;
   @if ($value > 60px) {
-    @include tab {
+    @include mq (vp-tab){
       padding: calc($value / 2) 0;
     }
   }
@@ -55,7 +55,7 @@
   width: min(100% - $calc, $width);
   margin: 0 auto;
   @if ($calc > 40px) {
-    @include sp {
+    @include mq (vp-sp){
       width: min(100% - calc($calc / 2), $width);
     }
   }
