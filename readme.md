@@ -52,7 +52,28 @@ SCSS
 ## Installation
 
 ```zsh
- npm ci
+  npm ci
+  npm install sass
+  npm install postcss-cli autoprefixer -D
+  npm install --save-dev eslint
+  npm i -D eslint-config-airbnb
+  npm i -D eslint-config-airbnb-base
+  npm i -D prettier
+```
+
+```json
+"scripts" {
+  "build": "webpack --mode production",
+  "lint": "eslint src/js/*.ts",
+  "lint:fix": "eslint src/js/*.ts --fix",
+  "format": "prettier --write .",
+  "sass": "sass src/sass:dist/css/ --style=compressed --watch",
+  "postcss": "postcss dist/css/style.css --use autoprefixer --dir dist/css/ --watch"
+},
+"browserslist": [
+  "last 2 versions",
+  "> 1% in JP"
+]
 ```
 
 ## Usage
