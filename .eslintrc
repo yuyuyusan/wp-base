@@ -1,0 +1,7 @@
+{
+  "rules": {
+    "linebreak-style": ["off"],
+    "no-unused-vars": ["off"]
+  },
+  "extends": ["airbnb-base"]
+}

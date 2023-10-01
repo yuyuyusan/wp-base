@@ -91,7 +91,8 @@ function add_additional_class_on_a($classes, $item, $args)
 add_filter('nav_menu_link_attributes', 'add_additional_class_on_a', 1, 3);
 
 // 指定したカスタムポストの詳細ページを404にする
-function redirect_case_single_page_404() {
+function redirect_case_single_page_404()
+{
 	if (is_singular('stores')) {
 		global $wp_query;
 		$wp_query->set_404();
@@ -103,7 +104,8 @@ function redirect_case_single_page_404() {
 add_action('template_redirect', 'redirect_case_single_page_404');
 
 // カテゴリーの階層をURLに反映させる
-function category_link_custom($query) {
+function category_link_custom($query)
+{
 	if (isset($query['name']) && isset($query['page'])) {
 		if ($query['name'] === 'page' && is_numeric($query['page'])) {
 			$query['paged'] = (int) $query['page'];
@@ -115,10 +117,10 @@ function category_link_custom($query) {
 	if (isset($query['category_name']) && strpos($query['category_name'], '/') === false && isset($query['name'])) {
 		$parent_category = get_category_by_slug($query['category_name']);
 		if ($parent_category instanceof WP_Term) {
-			$child_categories = get_categories('child_of='.$parent_category->term_id);
+			$child_categories = get_categories('child_of=' . $parent_category->term_id);
 			foreach ($child_categories as $child_category) {
 				if ($query['name'] === $child_category->category_nicename) {
-					$query['category_name'] = $query['category_name'].'/'.$query['name'];
+					$query['category_name'] = $query['category_name'] . '/' . $query['name'];
 					unset($query['name']);
 					break;
 				}
@@ -128,6 +130,3 @@ function category_link_custom($query) {
 	return $query;
 }
 add_filter('request', 'category_link_custom');
-
-
-	

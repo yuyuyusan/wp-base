@@ -5,6 +5,9 @@
   "main": "front-page.php",
   "scripts": {
     "build": "webpack --mode production",
+    "lint": "eslint src/js/*.ts",
+    "lint:fix": "eslint src/js/*.ts --fix",
+    "format": "prettier --write .",
     "sass": "sass src/sass:dist/css/ --style=compressed --watch",
     "postcss": "postcss dist/css/style.css --use autoprefixer --dir dist/css/ --watch"
   },
@@ -20,7 +23,11 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.15",
-    "postcss-cli": "^10.1.0"
+    "eslint": "^8.50.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "postcss-cli": "^10.1.0",
+    "prettier": "^3.0.3"
   },
   "browserslist": [
     "last 2 versions",
