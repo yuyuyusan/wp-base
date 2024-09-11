@@ -104,8 +104,7 @@ function redirect_case_single_page_404()
 add_action('template_redirect', 'redirect_case_single_page_404');
 
 // カテゴリーの階層をURLに反映させる
-function category_link_custom($query)
-{
+function category_link_custom($query){
 	if (isset($query['name']) && isset($query['page'])) {
 		if ($query['name'] === 'page' && is_numeric($query['page'])) {
 			$query['paged'] = (int) $query['page'];
